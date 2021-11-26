@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.scss";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="header">
+        <div className="logo-box">
+          <img
+            className="logo"
+            src="./assets/422-4223456_to-do-list-vector-todo-list-logos.png"
+            alt="logo"
+          />
+        </div>
+        <div className="text-box">
+          <h1 className="heading-primary">
+            <span className="heading-primary-main">
+              The most effective way to do it{" "}
+            </span>
+            <span className="heading-primary-sub">Is to do it</span>
+          </h1>
+
+          <a href="#" className="btn btn-white btn-animated">
+            Signup
+          </a>
+        </div>
+      </div>
     </div>
   );
 }
