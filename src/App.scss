@@ -1,3 +1,21 @@
+
+$color-white: #ececec;
+$color-grey: #6c7a89;
+$color-maroon: #532323;
+$color-grey-light-1: #fff;
+
+$max-width-row: 1140px;
+
+.u-center-text {
+  text-align: center;
+}
+.u-margin-bottom-8 {
+  margin-bottom: 50px;
+}
+.u-margin-bottom-10 {
+  margin-bottom: 8px;
+}
+
 .App {
   margin: 0;
   padding: 0;
@@ -11,19 +29,19 @@
     height: 95vh;
     background-image: linear-gradient(
         to right bottom,
-        rgba(236, 236, 236, 0.8),
-        rgba(108, 122, 137, 0.8)
+        rgba($color-white, 0.8),
+        rgba($color-grey, 0.8)
       ),
       url(./assets/kelly-sikkema-7hspi6m0yO4-unsplash.jpg);
     background-size: cover;
     background-position: top;
     position: relative;
 
-    clip-path: polygon(0 0, 100% 0%, 100% 83vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0%, 100% 75vh, 0 100%);
     .log-box {
       position: absolute;
       top: 40px;
-      right: 40px;
+      left: 40px;
       .logo {
         height: 35px;
       }
@@ -65,6 +83,7 @@
 
       .btn {
         border-radius: 100px;
+        margin: 10px;
         &:link,
         &.btn.visited {
           text-transform: uppercase;
@@ -84,7 +103,7 @@
         }
 
         &.btn-white {
-          background-color: #fff;
+          background-color: #f5f5f5;
           color: black;
         }
         &.btn-animated {
@@ -104,7 +123,7 @@
           transition: all 0.4s;
         }
         &.btn-white::after {
-          background-color: #fff;
+          background-color: #f5f5f5;
         }
         &.btn:hover::after {
           transform: scaleX(1.4) scaleY(1.6);
@@ -113,48 +132,56 @@
       }
     }
   }
+  .section-about {
+    background-color: $color-grey-light-1;
+    padding: 25rem 0;
+    margin-top: -50vh;
+
+    .heading-secondary {
+      font-size: 2.2rem;
+      display: inline-block;
+      font-weight: 600;
+      text-transform: uppercase;
+      background-image: linear-gradient(to right, $color-white, $color-grey);
+      -webkit-background-clip: text;
+      color: transparent;
+      transition: all 0.2s;
+      letter-spacing: 2px;
+
+      &:hover {
+        transform: skewY(2deg) skewX(15deg) scale(1.1);
+        text-shadow: 5px 10px 20px rgba(black, 0.2);
+      }
+    }
+    .row {
+      max-width: $max-width-row;
+      background-color: yellow;
+      margin: 0 auto;
+
+      .col-1-of-2 {
+        width: 570px;
+        float: left;
+
+        .heading-tertiary {
+          font-size: 16px;
+          font-weight: 700;
+          text-transform: uppercase;
+          .paragraph {
+            font-size: 16px;
+            margin-bottom: 10px;
+            background-color: blue;
+          }
+        }
+      }
+      .col-2-of-2 {
+        width: 570px;
+        float: left;
+      }
+    }
+  }
 }
 
-@keyframes moveInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-100px);
-  }
-  80% {
-    transform: translateX(10px);
-  }
 
-  100% {
-    opacity: 1;
-    transform: translate(0);
-  }
-}
-
-@keyframes moveInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(100px);
-  }
-  80% {
-    transform: translateX(-10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(0);
-  }
-}
-
-@keyframes moveInBottom {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translate(0);
-  }
-}
 
 //Gradientcolors
 //purple  #301934
